@@ -1,0 +1,78 @@
+.hero-section {
+  background-image: url(../images/hero-section/hero-background.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 70px 0px 80px 0px;
+  margin: 0 auto;
+  height: 100%;
+
+  @media screen and (min-width: $bp-tablet) {
+    padding: 123px 0px 127px 106px;
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/hero-section/hero-background@2x.png);
+  }
+ 
+  &__container {
+    @media screen and (max-width: $bp-desktop) {
+      text-align: center;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      text-align: left;
+    }
+  }
+
+  &__button {
+    color: var(--color-white);
+    background-color: var(--color-brand-blue);
+    border: 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.17;
+    padding: 16px 24px;
+    border-radius: 24px;
+    border: 2px solid var(--color-brand-blue);
+    margin-bottom: 8px;
+    transition: color 0.2s, background-color 0.2s, border 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--color-brand-black);
+      background: rgba(0, 0, 0, 0);
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.17;
+      padding: 16px 32px;
+      border-radius: 32px;
+      margin-bottom: 14px;
+    }
+  }
+
+  &__text-top {
+    font-size: 12px;
+
+    @media screen and (min-width: $bp-desktop) {
+      font-size: 18px;
+    }
+  }
+
+  &__text-bottom {
+    color: var(--color-brand-black2);
+    line-height: 1.72;
+    font-size: 12px;
+    max-width: 238px;
+    width: 100%;
+
+    @media screen and (max-width: $bp-desktop) {
+      margin: 0 auto;
+    }
+  }
+}

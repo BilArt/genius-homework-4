@@ -1,0 +1,126 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background: rgba(1, 31, 74, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  transition: opacity 0.2s, visibility 0.2s;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s, visibility 0.2s;
+
+  &.open {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &.open .modal__box {
+    transform: scale(1);
+  }
+
+  &__box {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    max-width: 724px;
+    height: 100%;
+    max-height: 682px;
+    padding: 42px 24px;
+    margin: 30px 15px;
+    background-color: var(--color-brand-black);
+    border-radius: 48px;
+    transform: scale(0);
+    transition: transform 0.2s;
+
+    @media screen and (min-width: $bp-mobile) {
+      padding: 42px 144px;
+  }
+}
+
+  &__close-btn {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    padding: 0;
+    border: none;
+    margin: 0;
+    cursor: pointer;
+    background-color: transparent;
+
+    & svg path {
+      fill: var(--color-white);
+      transition: fill 0.2s;
+    }
+
+    &:hover svg path {
+      fill: var(--color-brand-blue);
+    }
+  }
+
+  &__field {
+    margin-bottom: 24px;
+  }
+
+  &__label {
+    position: absolute;
+    display: block;
+    top: 18px;
+    left: 32px;
+  }
+
+  &__title {
+    color: var(--color-white);
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    color: var(--color-white);
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 32px;
+
+    & span {
+      color: var(--color-brand-blue);
+    }
+  }
+
+  &__input {
+    padding: 18px 32px;
+    width: 100%;
+    font-size: 13px;
+    border-radius: 32px;
+    border: 2px solid var(--color-grey);
+    color: var(--color-white);
+    background-color: transparent;
+
+    &:focus {
+      background-color: var(--color-grey);
+      outline: none;
+      transition: background-color 0.2s;
+    }
+
+    &::placeholder {
+      color: var(--color-white);
+    }
+  }
+  &__terms {
+    color: var(--color-grey);
+    margin: 0 auto;
+    max-width: 220px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+
+    &-link {
+      color: var(--color-grey);
+      text-underline-offset: 2px;
+    }
+  }
+}

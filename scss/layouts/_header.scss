@@ -1,0 +1,97 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  @media screen and (min-width: $bp-desktop) {
+    background-color: #ffffff40;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(5px);
+  }
+
+  &__container {
+    padding: 32px 0;
+    position: relative;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  &__logo {
+    height: 30px;
+    width: 57px;
+
+    @media screen and (min-width: $bp-desktop) {
+      height: 42px;
+      width: 74px;
+    }
+  }
+
+  &__menu {
+    display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: flex;
+      gap: 56px;
+      flex-grow: 1;
+      justify-content: center;
+    }
+  }
+
+  &__icons {
+    display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: flex;
+      gap: 32px;
+    }
+  }
+
+  &__icon {
+    fill: var(--color-brand-black);
+    transition: fill 0.2s;
+
+    &:hover {
+      fill: var(--color-brand-blue);
+    }
+  }
+
+  &__link {
+    color: var(--color-brand-black);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  &__link:hover {
+    color: var(--color-brand-blue);
+  }
+
+  &__burger {
+    position: absolute;
+    top: 30px;
+    right: 12px;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    fill: var(--color-white);
+    transition: fill 0.2s;
+
+    &:active {
+      fill: var(--color-brand-blue);
+    }
+
+    &:hover {
+      fill: var(--color-brand-blue);
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      display: none;
+    }
+  }
+}

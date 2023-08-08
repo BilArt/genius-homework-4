@@ -1,0 +1,40 @@
+.find-us-section {
+  &__title {
+    text-align: center;
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    gap: 24px;
+    justify-content: center;
+
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+      margin-bottom: 96px;
+      gap: 56px;
+    }
+  }
+
+  &__map {
+    flex-shrink: 0;
+    height: 232px;
+    margin: 0 -24px;
+
+    @media screen and (min-width: $bp-mobile) {
+      display: flex;
+      align-self: stretch;
+      flex-wrap: wrap;
+      height: 358px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    @media screen and (min-width: $bp-tablet) {
+      height: 510px;
+      width: 605px;
+      border-radius: 32px;
+    }
+  }
+}

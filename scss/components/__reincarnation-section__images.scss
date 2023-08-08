@@ -1,0 +1,116 @@
+.images {
+  display: none;
+
+  &__svg-star1 {
+    position: absolute;
+    left: 124px;
+    top: 361px;
+    animation: star-1 5s linear infinite;
+  }
+  
+  @keyframes star-1 {
+    0% {
+      -webkit-transform: scale(1) rotateX(0);
+      transform: scale(1) rotateX(0);
+    }
+    50% {
+      -webkit-transform: scale(2) rotateX(-180deg);
+      transform: scale(2) rotateX(-180deg);
+    }
+    100% {
+      -webkit-transform: scale(1) rotateX(-360deg);
+      transform: scale(1) rotateX(-360deg);
+    }
+  }
+  
+  &__svg-star2 {
+    position: absolute;
+    left: 471px;
+    top: 32px;
+    animation: star-2 2s linear infinite;
+  }
+  
+  @keyframes star-2 {
+    0% {
+      -webkit-transform: scale(1) rotateY(0);
+      transform: scale(1) rotateY(0);
+    }
+    50% {
+      -webkit-transform: scale(0.5) rotateY(180deg);
+      transform: scale(0.5) rotateY(180deg);
+    }
+    100% {
+      -webkit-transform: scale(1) rotateY(360deg);
+      transform: scale(1) rotateY(360deg);
+    }
+  }
+  
+  &__svg-star3 {
+    position: absolute;
+    left: 465px;
+    top: 290px;
+    animation: star-3 2s linear infinite;
+  }
+  
+  @keyframes star-3 {
+    0% {
+      -webkit-transform: scale(1) rotate3d(1, 1, 0, 0deg);
+      transform: scale(1) rotate3d(1, 1, 0, 0deg);
+    }
+    50% {
+      -webkit-transform: scale(2) rotate3d(1, 1, 0, -180deg);
+      transform: scale(2) rotate3d(1, 1, 0, -180deg);
+    }
+    100% {
+      -webkit-transform: scale(1) rotate3d(1, 1, 0, -360deg);
+      transform: scale(1) rotate3d(1, 1, 0, -360deg);
+    }
+  }
+  
+
+  @media screen and (min-width: $bp-desktop) {
+    display: block;
+    flex-basis: 50%;
+    min-width: 500px;
+    position: relative;
+
+    &__image-container:nth-last-child(1) {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &__image-before {
+      width: 328px;
+      height: 328px;
+      background-image: url(../images/reincarnation-section/before.jpg);
+      border-radius: 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      @media screen and (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        width: 328px;
+        height: 328px;
+        background-image: url(../images/reincarnation-section/before@2x.jpg);
+      }
+    }
+
+    &__image-after {
+      width: 328px;
+      height: 328px;
+      background-image: url(../images/reincarnation-section/after.jpg);
+      border-radius: 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      @media screen and (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        width: 328px;
+        height: 328px;
+        background-image: url(../images/reincarnation-section/after@2x.jpg);
+      }
+    }
+  }
+}

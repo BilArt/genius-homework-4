@@ -1,0 +1,24 @@
+/* Utils */
+@import "./utils/variables";
+@import "./utils/fonts";
+
+@import "./base";
+
+/* Components */
+@import './components/buttons';
+@import "./components/carousel";
+@import "./components/form";
+@import "./components/_reincarnation-section__images";
+@import "./components/menu";
+@import "./components/modal";
+@import "./components/pagination";
+@import "./components/procedures-card";
+
+/* Layouts */
+@import "./layouts/choosing-section";
+@import "./layouts/find-us-section";
+@import "./layouts/footer";
+@import "./layouts/header";
+@import "./layouts/hero";
+@import "./layouts/procedures-section";
+@import "./layouts/reincarnation-section";
