@@ -7,7 +7,7 @@
   padding: 16px 20px 0;
   background-color: var(--color-white);
   transform: translateX(100%);
-  transition: visibility 0.3s transform 0.3s;
+  transition: transform 0.3s;
   overflow: hidden;
   z-index: 2;
 
